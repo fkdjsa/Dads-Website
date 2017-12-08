@@ -8,6 +8,9 @@ body {
   margin-top: 2.5vh;
   font-weight: bold;
   font-family: sans-serif;
+  color: #004285;
+  /* line-height: 29px; */
+  /* font-size: 13px; */
 }
 
 a{
@@ -141,13 +144,14 @@ a{
 }
 
 .body-table{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   align-items: center;
+  display: block;
   max-width: 70%;
   margin: auto;
-  margin-top: -60px;
+  margin-top: 0px;
+  text-align: center;
+  font-size: 12px;
+  line-height: 26px;
 }
 
 .about-body-text-container{
@@ -279,7 +283,7 @@ a{
 /* Style the buttons that are used to open and close the accordion panel */
 button.accordion {
     background-color: #eee;
-    color: #444;
+    color: #004285;
     cursor: pointer;
     padding: 18px;
     width: 100%;
@@ -287,6 +291,7 @@ button.accordion {
     border: none;
     outline: none;
     font-weight: bold;
+    font-size: 16px;
     transition: 0.4s;
 }
 
