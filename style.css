@@ -117,10 +117,11 @@ a{
   font-family: sans-serif;
   font-size: 60pt;
   color: #004285;
-  /* background-color: rgba(1,1,1,0.5); */
+  background-color: rgba(255,255,255,0.25);
   /* border-bottom: solid orange; */
   margin: auto;
-  /* box-shadow: 0 0 10px 15px rgba(1,1,1,0.5); */
+  border-radius: 50px;
+  box-shadow: 0 0 27px 18px rgba(255,255,255,0.25);
 }
 
 .body-box-container{
