@@ -35,57 +35,101 @@
   <div class="body-table">
     <button class="accordion">Fractures/Broken Bones</button>
     <div class="panel">
-      <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      <p>
+        Foot and ankle fractures can sometimes be treated without surgery. If surgery is
+        required, the latest techniques can allow for earlier return to weight bearing and
+        normal function.
+      </p>
     </div>
 
     <button class="accordion">Heel Spur And Plantar Fasciitis</button>
     <div class="panel">
-      <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      <p>
+        Heel pain is one of the most common foot complaints. Often, the condition can be
+        improved with orthotic arch supports and medications. Occasionally, cortisone
+        injections and surgery are required to improve the condition.
+      </p>
     </div>
 
     <button class="accordion">Deformities (Bunions, Hammertoes)</button>
     <div class="panel">
-      <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      <p>
+        Foot deformities such as bunions and hammertoes sometimes can be painful and
+        can be treated with pads and adjustments to shoes. In more severe, cases
+        reconstructive surgery may be required.
+      </p>
     </div>
 
-    <button class="accordion">Ingrown toenails</button>
+    <button class="accordion">Toenail Fungus and Ingrown Toenails</button>
     <div class="panel">
-      <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      <p>
+        New innovations such as laser toenail treatments and medications can
+        permanently cure fungus in toenails. Simple procedures also can cure ingrown
+        toenails permanently.
+      </p>
     </div>
 
     <button class="accordion">Diabetic Foot Care</button>
     <div class="panel">
-      <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      <p>
+        Feet are a part of the body that is frequently affected by Diabetes Mellitus.
+        Regular foot examination including evaluation of the nerves and circulation of the
+        feet is critical to avoid more severe problems that can occur. Podiatrists play a
+        critical role in caring for the diabetic foot. Diabetic protective shoes and insoles
+        are usually covered by insurance and can protect feet from injury which may lead
+        to more serious problems.
+      </p>
     </div>
 
-    <button class="accordion">Orthotics and Arch Supports and Shoes</button>
+    <button class="accordion">Flat Feet</button>
     <div class="panel">
-      <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      <p>
+        Orthotic arch supports can be critical to improve foot pain caused by flat feet. Use
+        of arch supports can often help to avoid foot surgery to correct flat feet.
+      </p>
+    </div>
+
+    <button class="accordion">Skin Problems</button>
+    <div class="panel">
+      <p>
+        Warts, lumps, cysts, and varicose veins can be treated with a
+        variety of procedures including Laser treatment.
+      </p>
     </div>
 
   </div>
 
   <script>
-  var acc = document.getElementsByClassName("accordion");
-  var i;
+    var acc = document.getElementsByClassName("accordion");
+    var i;
 
-  for (i = 0; i < acc.length; i++) {
-    acc[i].onclick = function() {
-      this.classList.toggle("active");
-      var panel = this.nextElementSibling;
-      if (panel.style.maxHeight){
-        panel.style.maxHeight = null;
-      } else {
-        panel.style.maxHeight = panel.scrollHeight + "px";
+    for (i = 0; i < acc.length; i++)
+    {
+      acc[i].onclick = function()
+      {
+        var prevActive = document.getElementsByClassName("active");
+        var thisObjWasActiveLastFrame = this.classList.contains('active');
+        console.log(prevActive);
+        while(prevActive.length > 0)
+        {
+          prevActive[0].classList.remove("active");
+          console.log('removed active class from: '+prevActive);
+        }
+        if(!thisObjWasActiveLastFrame)
+        {
+          this.classList.add("active");
+          var panel = this.nextElementSibling;
+          panel.classList.add("active");
+        }
       }
     }
-  }
+
   </script>
 
   <footer class="footer-container">
     <div class="footer-text">
       <p>3336 South Pioneer Parkway, Suite 302<br>West Valley City, UT 84120<br>801.417.5386</p>
-      <p>© 2017</p>
+      <p id="copyRight"></p>
       <table align = center class="footer-table">
         <td><a href="index.html">Home</a></td>
         <td>Services</td>
@@ -95,3 +139,10 @@
       </table>
   </footer>
 </body>
+
+<script>
+  var copyRightDate = document.getElementById("copyRight");
+  var d = new Date();
+  var dateText = document.createTextNode('© 2017 - ' + d.getFullYear());
+  copyRight.appendChild(dateText);
+</script>
